@@ -14,7 +14,7 @@ export default function NavBar() {
           <p>Profile</p>
         </ListItem>
         <ListItem>
-          Work
+          Projects
         </ListItem>
       </Pages>
     </Container>

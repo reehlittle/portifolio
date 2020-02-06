@@ -1,20 +1,21 @@
 import styled from 'styled-components';
 
-
 export const Container = styled.div`
   display: flex;
   align-items: center;
   flex-direction: column;
 `;
 
-export const   Profile = styled.div`
+export const ProfileContainer = styled.div`
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: 80%;
   color: #fff;
   background: rgba(187, 168, 189, 0.04);
-  padding: 20px 20px;
-  margin-top: 50px;
+`;
+
+export const Profile = styled.div`
+  margin: 50px;
 `;
 
 export const Name = styled.div`
@@ -52,33 +53,31 @@ export const About = styled.div`
 `;
 
 export const Divisor = styled.div`
-  margin: 100px 0 50px;
+  margin: 50px 0;
   color: #fff;
   font-size: 18px;
   font-weight: 400;
   padding-bottom: 5px;
   border-bottom: 3px solid #FB4DAE;
-
 `;
 
 export const AppContainer = styled.div`
+  display: flex;
+  flex-direction: row;
   width: 80%;
   margin-top: 120px;
   background: rgba(187, 168, 189, 0.04);
   border-radius: 4px;
   border-bottom-right-radius: 20px;
-  
-  display: flex;
-  flex-direction: row;
 `;
 
 export const DescriptionContainer = styled.div`
+  display: flex;
+  flex-direction: column;
   height: 100%;
   width: 70%;
   margin: 10px 0 10px 73px;
   color: #fff;
-  display: flex;
-  flex-direction: column;
 
   span {
     font-size: 25px;
@@ -111,6 +110,9 @@ export const ItemCheck = styled.div`
 `;
 
 export const GitHubButton = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 80px;
   height: 40px;
   margin: 20px;
@@ -118,9 +120,6 @@ export const GitHubButton = styled.a`
   color: #fff;
   font-weight: 400;
   text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
   :hover {
     background: #f9279c;
@@ -132,6 +131,9 @@ export const GitHubButton = styled.a`
 `;
 
 export const AndroidButton = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 90px;
   height: 40px;
   margin: 20px;
@@ -139,9 +141,6 @@ export const AndroidButton = styled.a`
   color: #fff;
   font-weight: 400;
   text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
   :hover {
     background: #101010;
@@ -153,6 +152,9 @@ export const AndroidButton = styled.a`
 `;
 
 export const SiteButton = styled.a`
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 90px;
   height: 40px;
   margin: 20px;
@@ -160,9 +162,6 @@ export const SiteButton = styled.a`
   color: #fff;
   font-weight: 400;
   text-decoration: none;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 
   :hover {
     background: #325db7;

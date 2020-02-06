@@ -6,8 +6,6 @@ export const Container = styled.header`
   align-items: center;
 
   padding: 20px 0;
-  /* background: rgba(23,17,39,0.4); */
-  /* background: linear-gradient(135deg, rgba(23,17,39,0.5) 0%, rgba(40,25,55,1) 48%, rgba(48,23,52,1) 100%); */
 `;
 
 export const Pages = styled.div`
@@ -32,8 +30,6 @@ export const ListItem = styled.div`
     cursor: pointer;
   }
 `;
-
-
 
 export const Avatar = styled.div`
   width: 100px;
