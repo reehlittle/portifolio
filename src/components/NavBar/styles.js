@@ -1,11 +1,14 @@
-import styled from 'styled-components';
+import styled from "styled-components";
 
 export const Container = styled.header`
+  width: 80%;
+  max-width: 1024px;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
-
-  padding: 20px 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
 `;
 
 export const Pages = styled.div`
@@ -14,29 +17,33 @@ export const Pages = styled.div`
   color: #fff;
   font-size: 18px;
 
+  div:first-child {
+    padding-right: 20px;
+  }
   .selected {
     p {
       padding-bottom: 5px;
-      border-bottom: 3px solid #FB4DAE;
+      border-bottom: 3px solid #fb4dae;
     }
   }
 `;
 
 export const ListItem = styled.div`
-  margin: 0 25px;
+  display: flex;
 
   :hover {
-    color: #FB4DAE;
+    color: #fb4dae;
     cursor: pointer;
   }
 `;
 
 export const Avatar = styled.div`
+  display: flex;
+
   width: 100px;
   height: 100px;
   background: #fff;
   border-radius: 50%;
-
   img {
     width: 98px;
     height: 92px;

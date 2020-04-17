@@ -1,40 +1,68 @@
-import styled from 'styled-components';
+import styled, { css } from "styled-components";
 
 export const Container = styled.div`
+  width: 90%;
   display: flex;
-  align-items: center;
   flex-direction: column;
+  align-items: center;
+
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 export const ProfileContainer = styled.div`
+  width: 100%;
+  max-width: 1024px;
   display: flex;
   flex-direction: column;
-  width: 80%;
   color: #fff;
   background: rgba(187, 168, 189, 0.04);
 `;
 
-export const Profile = styled.div`
-  margin: 50px;
+export const Content = styled.div`
+  @media screen and (min-width: 650px) {
+    margin: 50px;
+    transition: ease all 0.5s;
+    ${(props) =>
+      props.direction === "row" &&
+      css`
+        display: flex;
+      `}
+  }
 `;
 
 export const Name = styled.div`
   display: flex;
   flex-direction: row;
-  font-size: 50px;
+  justify-content: center;
+
+  font-size: 34px;
+
+  @media screen and (min-width: 650px) {
+    justify-content: flex-start;
+    font-size: 50px;
+    transition: ease all 0.5s;
+  }
 `;
 
 export const Ball = styled.div`
   width: 12px;
   height: 12px;
   border-radius: 6px;
-  background: #FB4DAE;
+  background: #fb4dae;
 `;
 
 export const Job = styled.div`
-  font-size: 24px;
-  color: #FB4DAE;
+  font-size: 20px;
+  color: #fb4dae;
   font-weight: 400;
+  text-align: center;
+
+  @media screen and (min-width: 650px) {
+    font-size: 24px;
+    text-align: start;
+    transition: ease all 0.5s;
+  }
 `;
 
 export const About = styled.div`
@@ -48,41 +76,67 @@ export const About = styled.div`
   margin-top: 20px;
 
   span {
-    color: #FB4DAE;
+    color: #fb4dae;
   }
 `;
 
 export const Divisor = styled.div`
   margin: 50px 0;
   color: #fff;
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 400;
   padding-bottom: 5px;
-  border-bottom: 3px solid #FB4DAE;
+  border-bottom: 3px solid #fb4dae;
+
+  @media screen and (min-width: 650px) {
+    font-size: 18px;
+    transition: ease all 0.5s;
+  }
 `;
 
 export const AppContainer = styled.div`
+  width: 100%;
+  max-width: 1024px;
   display: flex;
   flex-direction: row;
-  width: 80%;
-  margin-top: 120px;
   background: rgba(187, 168, 189, 0.04);
   border-radius: 4px;
-  border-bottom-right-radius: 20px;
+  margin-bottom: 50px;
+
+  img {
+    display: none;
+  }
+
+  @media screen and (min-width: 650px) {
+    margin: 50px;
+    padding: 20px 0;
+    transition: ease all 0.5s;
+
+    img {
+      display: flex;
+      transition: ease all 0.5s;
+    }
+  }
 `;
 
 export const DescriptionContainer = styled.div`
+  height: 100%;
   display: flex;
   flex-direction: column;
-  height: 100%;
-  width: 70%;
-  margin: 10px 0 10px 73px;
+
   color: #fff;
 
   span {
-    font-size: 25px;
+    font-size: 18px;
     font-weight: 400;
     margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: 650px) {
+    width: 50%;
+    span {
+      font-size: 25px;
+    }
   }
 `;
 
@@ -90,7 +144,12 @@ export const Title = styled.p`
   font-weight: 100;
   line-height: 1.4;
   letter-spacing: 2px;
-  font-size: 40px;
+
+  font-size: 24px;
+
+  @media screen and (min-width: 650px) {
+    font-size: 40px;
+  }
 `;
 
 export const Description = styled.p`
@@ -103,6 +162,10 @@ export const Description = styled.p`
   margin: auto;
   -webkit-font-smoothing: subpixel-antialiased;
   margin-bottom: 20px;
+
+  @media screen and (min-width: 650px) {
+    margin: 20px 0;
+  }
 `;
 
 export const ItemCheck = styled.div`
@@ -116,7 +179,7 @@ export const GitHubButton = styled.a`
   width: 80px;
   height: 40px;
   margin: 20px;
-  background: #FB4DAE;
+  background: #fb4dae;
   color: #fff;
   font-weight: 400;
   text-decoration: none;
@@ -158,7 +221,7 @@ export const SiteButton = styled.a`
   width: 90px;
   height: 40px;
   margin: 20px;
-  background: #4469B6;
+  background: #4469b6;
   color: #fff;
   font-weight: 400;
   text-decoration: none;
@@ -173,24 +236,23 @@ export const SiteButton = styled.a`
 `;
 
 export const AppImage = styled.div`
-  width: 30%;
+  width: 50%;
   display: flex;
   justify-content: flex-end;
 
   img {
-    width: 250px;
-    margin-top: -70px;
-    margin-right: -40px;
+    width: 80%;
   }
 `;
 
 export const WebImage = styled.div`
-  width: 30%;
+  width: 50%;
   display: flex;
+  justify-content: center;
   align-items: center;
 
   img {
-    height: 200px;
+    width: 90%;
     margin-left: -40px;
   }
 `;

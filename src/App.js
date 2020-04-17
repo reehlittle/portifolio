@@ -1,13 +1,13 @@
-import React from 'react';
+import React from "react";
 
-import GlobalStyle from './styles/global';
-import NavBar from './components/NavBar';
-import Initial from './pages/Initial';
+import GlobalStyle from "./styles/global";
+import NavBar from "./components/NavBar";
+import Initial from "./pages/Initial";
 
 function App() {
   return (
     <>
-      <GlobalStyle/>
+      <GlobalStyle />
       <NavBar />
       <Initial />
     </>
