@@ -22,10 +22,13 @@ import {
   SiteButton,
   AppImage,
   WebImage,
+  PrivacyPolicy,
 } from "./styles";
 import superTrunfo from "../../assets/images/super_trunfo.png";
 import imageUp from "../../assets/images/images_up.png";
 import beerLocation from "../../assets/images/beer_location.png";
+import cookieClicker from "../../assets/images/cookie_clicker.png";
+import history from "../../services/history";
 
 export default function Initial() {
   return (
@@ -42,13 +45,52 @@ export default function Initial() {
           <About>
             {" "}
             A girl who loves coding and tries to learn new things everyday.
-            Currently working as Full Stack developer, but in love with React
+            Currently working as Full Stack developer and in love with React
             <span>JS</span>, React <span>Native</span> and Node<span>JS</span>.
           </About>
         </Content>
       </ProfileContainer>
 
       <Divisor>PROJECTS</Divisor>
+      <AppContainer>
+        <Content direction="row">
+          <DescriptionContainer>
+            <Title>Cookie Clicker App</Title>
+            <span>APP</span>
+            <Description>
+              It is an incremental game (idle). The object of the game is to
+              bake cookies by clicking on a giant cookie until you have enough
+              cookies to buy upgrades. Cookie Clicker Parody is a parody of the
+              original games (https://orteil.dashnet.org/cookieclicker/).
+            </Description>
+            <PrivacyPolicy onClick={() => history.push("/cookieClicker/term")}>
+              Privacy Policy Link
+            </PrivacyPolicy>
+            <ItemCheck>
+              <MdCheck /> Redux
+            </ItemCheck>
+            <ItemCheck>
+              <MdCheck /> Saga
+            </ItemCheck>
+            <ItemCheck>
+              <MdCheck /> Styled Components
+            </ItemCheck>
+            <ItemCheck>
+              <MdCheck /> Navigation
+            </ItemCheck>
+            <AndroidButton
+              href={
+                "https://play.google.com/store/apps/details?id=com.coockieclicker"
+              }
+            >
+              <FaPlay /> Play Store
+            </AndroidButton>
+          </DescriptionContainer>
+          <AppImage>
+            <img src={cookieClicker} alt="Super Trunfo" />
+          </AppImage>
+        </Content>
+      </AppContainer>
       <AppContainer>
         <Content direction="row">
           <DescriptionContainer>

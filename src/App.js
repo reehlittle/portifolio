@@ -2,14 +2,14 @@ import React from "react";
 
 import GlobalStyle from "./styles/global";
 import NavBar from "./components/NavBar";
-import Initial from "./pages/Initial";
+import Routes from "./routes";
 
 function App() {
   return (
     <>
       <GlobalStyle />
       <NavBar />
-      <Initial />
+      <Routes />
     </>
   );
 }

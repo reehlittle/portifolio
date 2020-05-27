@@ -256,3 +256,8 @@ export const WebImage = styled.div`
     margin-left: -40px;
   }
 `;
+
+export const PrivacyPolicy = styled.p`
+  cursor: pointer;
+  margin-bottom: 20px;
+`;
