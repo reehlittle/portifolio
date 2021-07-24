@@ -24,10 +24,11 @@ import {
   WebImage,
   PrivacyPolicy,
 } from "./styles";
-import superTrunfo from "../../assets/images/super_trunfo.png";
 import imageUp from "../../assets/images/images_up.png";
 import beerLocation from "../../assets/images/beer_location.png";
 import cookieClicker from "../../assets/images/cookie_clicker.png";
+import moraesToledo from "../../assets/images/moraes_toledo.png";
+import box from "../../assets/images/box.png";
 import history from "../../services/history";
 
 export default function Initial() {
@@ -41,17 +42,92 @@ export default function Initial() {
               <b>renata</b> barreto <Ball />
             </Name>
           </div>
-          <Job>Full Stack / Junior Front End Developer</Job>
+          <Job>Full Stack / Front End Developer</Job>
           <About>
-            {" "}
             A girl who loves coding and tries to learn new things everyday.
             Currently working as Full Stack developer and in love with React
             <span>JS</span>, React <span>Native</span> and Node<span>JS</span>.
           </About>
+          <About>
+            Contacts:
+            <br />
+            <a href="https://www.linkedin.com/in/renatabarreto/">Linkedin</a>
+            <br />
+            <span>renata.barreto2@gmail.com</span>
+          </About>
         </Content>
       </ProfileContainer>
 
-      <Divisor>PROJECTS</Divisor>
+      <Divisor id="projects">PROJECTS</Divisor>
+      <AppContainer>
+        <Content direction="row">
+          <DescriptionContainer>
+            <Title>Box</Title>
+            <span>APP</span>
+            <Description>
+              The age is to help motorcycle owners and mechanics maintain a
+              track record of services rendered. In addition to save information
+              the app will offer features like schedule, budget and traking of
+              the service progress.
+            </Description>
+            <ItemCheck>
+              <MdCheck /> React Native
+            </ItemCheck>
+            <ItemCheck>
+              <MdCheck /> Node Js
+            </ItemCheck>
+
+            <GitHubButton href={"https://github.com/reehlittle/box_app"}>
+              <FaGithub /> Git hub
+            </GitHubButton>
+          </DescriptionContainer>
+          <AppImage>
+            <img src={box} alt="Box" />
+          </AppImage>
+        </Content>
+      </AppContainer>
+      <AppContainer>
+        <Content direction="row">
+          <DescriptionContainer>
+            <Title>Moraes Toledo App</Title>
+            <span>APP</span>
+            <Description>
+              App developed for Moraes Toledo Arq. and Engineering. The app is
+              part of a project to help real estate agents to create and inform
+              a customer the budget of a project. The agent fills a form with
+              the quantity of rooms of the building and the application
+              calculates 3 types of budgets (Invest, Live and Premium). This
+              budgets represents Architecture projects that Moraes Toledo offers
+              (http://moraestoledo.tk/).
+            </Description>
+            <PrivacyPolicy href="http://moraestoledo.tk/privacy-policy">
+              Privacy Policy Link
+            </PrivacyPolicy>
+            <ItemCheck>
+              <MdCheck /> Redux
+            </ItemCheck>
+            <ItemCheck>
+              <MdCheck /> Saga
+            </ItemCheck>
+            <ItemCheck>
+              <MdCheck /> Styled Components
+            </ItemCheck>
+            <ItemCheck>
+              <MdCheck /> Navigation
+            </ItemCheck>
+            <AndroidButton
+              href={
+                "https://play.google.com/store/apps/details?id=com.moraestoledoapp"
+              }
+            >
+              <FaPlay /> Play Store
+            </AndroidButton>
+          </DescriptionContainer>
+          <AppImage>
+            <img src={moraesToledo} alt="Moraes Toledo" />
+          </AppImage>
+        </Content>
+      </AppContainer>
       <AppContainer>
         <Content direction="row">
           <DescriptionContainer>
@@ -88,37 +164,6 @@ export default function Initial() {
           </DescriptionContainer>
           <AppImage>
             <img src={cookieClicker} alt="Super Trunfo" />
-          </AppImage>
-        </Content>
-      </AppContainer>
-      <AppContainer>
-        <Content direction="row">
-          <DescriptionContainer>
-            <Title>Game Super Trunfo</Title>
-            <span>APP</span>
-            <Description>
-              A Card Game based on SuperTrunfo Cards. On the game the player
-              battles against the computer to see who gets all the cards. The
-              APP has been developed with <b>React Native</b>.
-            </Description>
-            <ItemCheck>
-              <MdCheck /> Redux
-            </ItemCheck>
-            <ItemCheck>
-              <MdCheck /> Saga
-            </ItemCheck>
-            <ItemCheck>
-              <MdCheck /> Styled Components
-            </ItemCheck>
-            <ItemCheck>
-              <MdCheck /> Navigation
-            </ItemCheck>
-            <GitHubButton href={"https://github.com/reehlittle/superTrunfo"}>
-              <FaGithub /> GitHub
-            </GitHubButton>
-          </DescriptionContainer>
-          <AppImage>
-            <img src={superTrunfo} alt="Super Trunfo" />
           </AppImage>
         </Content>
       </AppContainer>

@@ -15,10 +15,8 @@ export default function NavBar() {
         />
       </Avatar>
       <Pages>
-        <ListItem className={"selected"}>
-          <p>Profile</p>
-        </ListItem>
-        <ListItem>Projects</ListItem>
+        <ListItem className={"selected"}>Profile</ListItem>
+        <ListItem href="#projects">Projects</ListItem>
       </Pages>
     </Container>
   );

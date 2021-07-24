@@ -21,15 +21,20 @@ export const Pages = styled.div`
     padding-right: 20px;
   }
   .selected {
-    p {
-      padding-bottom: 5px;
-      border-bottom: 3px solid #fb4dae;
-    }
+    padding-bottom: 5px;
+    border-bottom: 3px solid #fb4dae;
   }
 `;
 
-export const ListItem = styled.div`
+export const ListItem = styled.a`
   display: flex;
+  text-decoration: none;
+  color: white;
+  margin-right: 20px;
+
+  &:visited {
+    color: white;
+  }
 
   :hover {
     color: #fb4dae;

@@ -78,6 +78,20 @@ export const About = styled.div`
   span {
     color: #fb4dae;
   }
+
+  a {
+    cursor: pointer;
+    color: #fb4dae;
+
+    text-decoration: none;
+    &:visited {
+      color: #fb4dae;
+    }
+
+    &:hover {
+      color: white;
+    }
+  }
 `;
 
 export const Divisor = styled.div`
@@ -241,7 +255,8 @@ export const AppImage = styled.div`
   justify-content: flex-end;
 
   img {
-    width: 80%;
+    width: 60%;
+    height: fit-content;
   }
 `;
 
@@ -257,7 +272,17 @@ export const WebImage = styled.div`
   }
 `;
 
-export const PrivacyPolicy = styled.p`
+export const PrivacyPolicy = styled.a`
   cursor: pointer;
   margin-bottom: 20px;
+  font-size: 16px;
+
+  text-decoration: none;
+  &:visited {
+    color: white;
+  }
+
+  &:hover {
+    color: #fb4dae;
+  }
 `;
