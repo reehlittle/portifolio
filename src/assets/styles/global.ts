@@ -1,4 +1,4 @@
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 export default createGlobalStyle`
   /* @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap'); */
@@ -16,7 +16,7 @@ export default createGlobalStyle`
     font: 14px Roboto;
     font-weight: 100;
   }
- 
+
 
   body {
     background: rgb(48,23,52);

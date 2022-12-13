@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components';
 
 export const Container = styled.div`
   width: 90%;
@@ -19,12 +19,12 @@ export const ProfileContainer = styled.div`
   background: rgba(187, 168, 189, 0.04);
 `;
 
-export const Content = styled.div`
+export const Content = styled.div<any>`
   @media screen and (min-width: 650px) {
     margin: 50px;
     transition: ease all 0.5s;
-    ${(props) =>
-      props.direction === "row" &&
+    ${({ direction }) =>
+      direction === 'row' &&
       css`
         display: flex;
       `}

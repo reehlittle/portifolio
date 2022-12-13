@@ -1,7 +1,7 @@
-import React from "react";
-
-import { MdCheck } from "react-icons/md";
-import { FaGithub, FaPlay, FaGlobe } from "react-icons/fa";
+import React from 'react';
+import { MdCheck } from 'react-icons/md';
+import { FaGithub, FaPlay, FaGlobe } from 'react-icons/fa';
+import { useNavigate } from 'react-router-dom';
 
 import {
   Container,
@@ -23,17 +23,19 @@ import {
   AppImage,
   WebImage,
   PrivacyPolicy,
-} from "./styles";
-import imageUp from "../../assets/images/images_up.png";
-import beerLocation from "../../assets/images/beer_location.png";
-import cookieClicker from "../../assets/images/cookie_clicker.png";
-import moraesToledo from "../../assets/images/moraes_toledo.png";
-import box from "../../assets/images/box.png";
-import history from "../../services/history";
+} from './styles';
+import imageUp from 'src/assets/images/images_up.png';
+import beerLocation from 'src/assets/images/beer_location.png';
+import cookieClicker from 'src/assets/images/cookie_clicker.png';
+import moraesToledo from 'src/assets/images/moraes_toledo.png';
+import box from 'src/assets/images/box.png';
+import Navbar from 'src/uikit/components/navbar';
+const Home = () => {
+  const navigate = useNavigate();
 
-export default function Initial() {
   return (
     <Container>
+      <Navbar />
       <Divisor>PROFILE</Divisor>
       <ProfileContainer>
         <Content>
@@ -44,8 +46,8 @@ export default function Initial() {
           </div>
           <Job>Full Stack / Front End Developer</Job>
           <About>
-            A girl who loves coding and tries to learn new things everyday.
-            Currently working as Full Stack developer and in love with React
+            A girl who loves coding and tries to learn new things everyday. Currently working as Full Stack developer
+            and in love with React
             <span>JS</span>, React <span>Native</span> and Node<span>JS</span>.
           </About>
           <About>
@@ -65,10 +67,9 @@ export default function Initial() {
             <Title>Box</Title>
             <span>APP</span>
             <Description>
-              The age is to help motorcycle owners and mechanics maintain a
-              track record of services rendered. In addition to save information
-              the app will offer features like schedule, budget and traking of
-              the service progress.
+              The age is to help motorcycle owners and mechanics maintain a track record of services rendered. In
+              addition to save information the app will offer features like schedule, budget and traking of the service
+              progress.
             </Description>
             <ItemCheck>
               <MdCheck /> React Native
@@ -77,7 +78,7 @@ export default function Initial() {
               <MdCheck /> Node Js
             </ItemCheck>
 
-            <GitHubButton href={"https://github.com/reehlittle/box_app"}>
+            <GitHubButton href={'https://github.com/reehlittle/box_app'}>
               <FaGithub /> Git hub
             </GitHubButton>
           </DescriptionContainer>
@@ -92,17 +93,12 @@ export default function Initial() {
             <Title>Moraes Toledo App</Title>
             <span>APP</span>
             <Description>
-              App developed for Moraes Toledo Arq. and Engineering. The app is
-              part of a project to help real estate agents to create and inform
-              a customer the budget of a project. The agent fills a form with
-              the quantity of rooms of the building and the application
-              calculates 3 types of budgets (Invest, Live and Premium). This
-              budgets represents Architecture projects that Moraes Toledo offers
-              (http://moraestoledo.tk/).
+              App developed for Moraes Toledo Arq. and Engineering. The app is part of a project to help real estate
+              agents to create and inform a customer the budget of a project. The agent fills a form with the quantity
+              of rooms of the building and the application calculates 3 types of budgets (Invest, Live and Premium).
+              This budgets represents Architecture projects that Moraes Toledo offers (http://moraestoledo.tk/).
             </Description>
-            <PrivacyPolicy href="http://moraestoledo.tk/privacy-policy">
-              Privacy Policy Link
-            </PrivacyPolicy>
+            <PrivacyPolicy href="http://moraestoledo.tk/privacy-policy">Privacy Policy Link</PrivacyPolicy>
             <ItemCheck>
               <MdCheck /> Redux
             </ItemCheck>
@@ -115,11 +111,7 @@ export default function Initial() {
             <ItemCheck>
               <MdCheck /> Navigation
             </ItemCheck>
-            <AndroidButton
-              href={
-                "https://play.google.com/store/apps/details?id=com.moraestoledoapp"
-              }
-            >
+            <AndroidButton href={'https://play.google.com/store/apps/details?id=com.moraestoledoapp'}>
               <FaPlay /> Play Store
             </AndroidButton>
           </DescriptionContainer>
@@ -134,14 +126,11 @@ export default function Initial() {
             <Title>Cookie Clicker App</Title>
             <span>APP</span>
             <Description>
-              It is an incremental game (idle). The object of the game is to
-              bake cookies by clicking on a giant cookie until you have enough
-              cookies to buy upgrades. Cookie Clicker Parody is a parody of the
-              original games (https://orteil.dashnet.org/cookieclicker/).
+              It is an incremental game (idle). The object of the game is to bake cookies by clicking on a giant cookie
+              until you have enough cookies to buy upgrades. Cookie Clicker Parody is a parody of the original games
+              (https://orteil.dashnet.org/cookieclicker/).
             </Description>
-            <PrivacyPolicy onClick={() => history.push("/cookieClicker/term")}>
-              Privacy Policy Link
-            </PrivacyPolicy>
+            <PrivacyPolicy onClick={() => navigate('/cookieClicker/term')}>Privacy Policy Link</PrivacyPolicy>
             <ItemCheck>
               <MdCheck /> Redux
             </ItemCheck>
@@ -154,11 +143,7 @@ export default function Initial() {
             <ItemCheck>
               <MdCheck /> Navigation
             </ItemCheck>
-            <AndroidButton
-              href={
-                "https://play.google.com/store/apps/details?id=com.coockieclicker"
-              }
-            >
+            <AndroidButton href={'https://play.google.com/store/apps/details?id=com.coockieclicker'}>
               <FaPlay /> Play Store
             </AndroidButton>
           </DescriptionContainer>
@@ -176,9 +161,8 @@ export default function Initial() {
             <Title>Images UP</Title>
             <span>API</span>
             <Description>
-              An API that facilitates the upload and control of images. With a
-              graphical interface for creating users and managing files. Created
-              with <b>React</b> and <b>Node</b>.
+              An API that facilitates the upload and control of images. With a graphical interface for creating users
+              and managing files. Created with <b>React</b> and <b>Node</b>.
             </Description>
             <ItemCheck>
               <MdCheck /> Jwt
@@ -189,7 +173,7 @@ export default function Initial() {
             <ItemCheck>
               <MdCheck /> Sequelize
             </ItemCheck>
-            <SiteButton href={"http://www.imagesup.tk/"}>
+            <SiteButton href={'http://www.imagesup.tk/'}>
               <FaGlobe /> Site
             </SiteButton>
           </DescriptionContainer>
@@ -201,11 +185,9 @@ export default function Initial() {
             <Title>Beer Location</Title>
             <span>APP</span>
             <Description>
-              An app to help you find the beer closest to you. The project
-              started in 2015 with Phabiulla Nascimento and me. In 2019, we
-              rebuilt with the modern versions of the SDK and Laravel. The
-              application was developed on the <b>Android JDK</b> and the API
-              was
+              An app to help you find the beer closest to you. The project started in 2015 with Phabiulla Nascimento and
+              me. In 2019, we rebuilt with the modern versions of the SDK and Laravel. The application was developed on
+              the <b>Android JDK</b> and the API was
               <b> Laravel - PHP</b>.
             </Description>
             <ItemCheck>
@@ -217,11 +199,7 @@ export default function Initial() {
             <ItemCheck>
               <MdCheck /> Colaborativo
             </ItemCheck>
-            <AndroidButton
-              href={
-                "https://play.google.com/store/apps/details?id=beerlocation.com.br&hl=en_US"
-              }
-            >
+            <AndroidButton href={'https://play.google.com/store/apps/details?id=beerlocation.com.br&hl=en_US'}>
               <FaPlay /> Play Store
             </AndroidButton>
           </DescriptionContainer>
@@ -232,4 +210,6 @@ export default function Initial() {
       </AppContainer>
     </Container>
   );
-}
+};
+
+export default React.memo(Home);
