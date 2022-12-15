@@ -22,7 +22,9 @@
       "@app/pages": ["src/app/pages"],
       "@app/routes": ["src/app/routes"],
       "@app/models": ["src/app/models.ts"],
-      "@assets/*": ["src/assets/*"]
+      "@assets/*": ["src/assets/*"],
+      "@uikit/components": ["src/uikit/components"],
+      "@uikit/models": ["src/uikit/models"]
     }
   },
   "include": ["src"]

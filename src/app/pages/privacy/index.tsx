@@ -1,11 +1,12 @@
 /* eslint-disable react/no-unescaped-entities */
-import { Container, AppContainer } from '../home/styles';
+import { Container } from '../home/styles';
+import { SectionContainer } from '@uikit/components';
 import { Description } from './styles';
 
 export default function Privacy() {
   return (
     <Container>
-      <AppContainer>
+      <SectionContainer>
         <Description>
           Política de Privacidade
           <p>
@@ -186,7 +187,7 @@ export default function Privacy() {
           <p>E-mail: renata.barreto2@gmail.com</p>
           <p></p>
         </Description>
-      </AppContainer>
+      </SectionContainer>
     </Container>
   );
 }
