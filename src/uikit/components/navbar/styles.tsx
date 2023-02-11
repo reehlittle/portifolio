@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const Container = styled.header`
@@ -26,7 +27,7 @@ export const Pages = styled.div`
   }
 `;
 
-export const ListItem = styled.a`
+export const ListItem = styled(Link)`
   display: flex;
   text-decoration: none;
   color: white;
